@@ -72,8 +72,8 @@ function Contact ({data}) {
         <div className="row">
           <div className="eight columns">
 
-            <form className="email-form" method="POST" id="contactForm1" name="contactForm1" data-netlify="true" onSubmit={e => onSubmit(e, setSubmitText)}>
-              <input type="hidden" name="form-name" value="contactForm1" />
+            <form className="email-form" method="POST" id="feedForm" name="feedForm" data-netlify="true" onSubmit={e => onSubmit(e, setSubmitText)}>
+              <input type="hidden" name="form-name" value="feedForm" />
               <p style={{ display: "none" }}>
                 <label>
                   Don’t fill this out if you expect to hear from us!
