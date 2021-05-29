@@ -2,8 +2,6 @@
 
 This is my portfolio website. You can check it out [here.](https://singhshashank.co)
 
-[![Run on Repl.it](https://repl.it/badge/github/shashankcic/singhshashank-tech)](https://repl.it/github/shashankcic/singhshashank-tech)
-
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
