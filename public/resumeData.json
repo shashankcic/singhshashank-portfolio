@@ -1,0 +1,152 @@
+{
+  "main": {
+    "name":"Shashank Singh",
+    "occupation":"Student Developer",
+    "description":"Programming and Commerce Enthusiast, Content and Graphic Designer",
+    "image":"profilepic.jpg",
+    "bio":"A hardworking, highly motivated and ambitious final year engineering student from University of Delhi in the field of Information Technology, with a keen interest in programming, mathematics, commerce and designing. Likes to explore new fields & new interests, easily adaptable to new environments, and also makes friends easily. Has good problem solving ability and analytical skills. Has a liking for open source and is looking for an opportunity to work with these great minds.",
+    "contactmessage":"For any Query/Issue, feel free to contact me.",
+    "email": "singhshashankcic@ducic.ac.in",
+    "phone": "+91-7985918248",
+    "address":{
+      "street":"University of Delhi",
+      "city":"New Delhi",
+      "state":"Delhi",
+      "zip": "110007"
+    },
+    "website": "https://www.singhshashank.co",
+    "resumedownload":"https://www.singhshashank.co",
+    "social":[
+      {
+        "name":"twitter",
+        "url":"https://twitter.com/shashhaank",
+        "className":"fa fa-twitter"
+      }, 
+      {
+        "name":"medium",
+        "url":"https://singhshashank.medium.com",
+        "className":"fab fa-medium-m"
+      },
+      {
+        "name":"linkedin",
+        "url":"https://www.linkedin.com/in/shashankcic/",
+        "className":"fa fa-linkedin"
+      },
+      {
+        "name":"github",
+        "url":"https://github.com/shashankcic",
+        "className":"fa fa-github"
+      }
+    ]
+  },
+  "resume":{
+    "skillmessage":"",
+    "education":[
+      {
+        "school":"Cluster Innovation Centre, University of Delhi",
+        "degree":"Bachelors (Information Technology & Mathematical Innovation)",
+        "graduated":"Presently studying",
+        "description":""
+      },
+      {
+        "school":"Kendriya Vidyalaya, AFS, Bamrauli, Allahabad",
+        "degree":"AISSCE (Class XII), CBSE",
+        "graduated":"2016",
+        "description":""
+      },
+      {
+        "school":"Kendriya Vidyalaya, AFS, Bamrauli, Allahabad",
+        "degree":"HighSchool (Class X), CBSE",
+        "graduated":"2014",
+        "description":""
+      }
+    ],
+    "work":[
+      {
+        "company":"Defence Research & Development Organisation",
+        "title":"Software Designer, Research Intern",
+        "years":"June 2018 - Nov 2018",
+        "description":""
+      },
+      {
+        "company":"Prof. Shobha Bagai, University of Delhi",
+        "title":"Web Developer, Summer Intern",
+        "years":"May 2019 - Sept 2019",
+        "description":""
+      },
+      {
+        "company":"Dean Alumni Affairs, University of Delhi",
+        "title":"Editor and Graphic Designer, Voluntary",
+        "years":"Nov 2017 - Mar 2018",
+        "description":""
+      }
+    ],
+    "skills":[
+      {
+        "name":"ReactJs",
+        "level":"95%"
+      },
+      {
+        "name":"HTML5,CSS,JavaScript",
+        "level":"95%"
+      },
+      {
+        "name":"C++",
+        "level":"90%"
+      },
+      {
+        "name":"MERN Stack",
+        "level":"85%"
+      },
+      {
+        "name":"Git",
+        "level":"80%"
+      },
+      {
+        "name":"Python",
+        "level":"75%"
+      }
+    ]
+  },
+  "portfolio":{
+    "projects": [
+      {
+        "title":"Multi-Modal Emotion Recognition",
+        "category":"A model for emotion recognition using Python.",
+        "image":"emotion-rec.jpg",
+        "url":"https://www.singhshashank.co"
+      },
+      {
+        "title":"Market Basket Analysis",
+        "category":"A project in R to do Market Basket Analysis.",
+        "image":"mba.png",
+        "url":"https://singhshashank.medium.com/predicting-purchases-with-market-basket-analysis-d6ad2152bf6e"
+      },
+      {
+        "title":"Homote",
+        "category":"A Home Automation System using NodeMCU, Arduino IDE & Android Studio",
+        "image":"homote.png",
+        "url":"https://singhshashank.medium.com/homote-your-home-automation-remote-7d0cfa859ea4"
+      },
+      {
+        "title":"Image Recognition App",
+        "category":"A face recognition app built with ReactJs",
+        "image":"image-rec.png",
+        "url":"https://image-rec-brain.herokuapp.com/"
+      }
+    ]
+  },
+  "interests":{
+    "interests":[
+      {
+        "interest":"Open Source Development"
+      },
+      {
+        "interest":"Business Analytics"
+      },
+      {
+        "interest":"Web Development"
+      }
+    ]
+  }
+}
