@@ -16,47 +16,58 @@ function Contact ({data}) {
       var message = data.contactmessage;
     }
 
-    const onSubmit = async (event, setSubmitText) => {
+    const [submitText, setSubmitText] = useState(null);
+    const [inputData, setInputData] = useState({
+      contactName: "",
+      contactEmail: "",
+      contactSubject: "",
+      contactMessage: ""
+    })
+
+    const handleChange = (e) => {
+      setInputData({
+        ...inputData,
+        [e.target.name]: e.target.value
+      })
+    }
+
+    const handleSubmit = async (event) => {
       event.preventDefault();
       const formElements = [...event.currentTarget.elements];
-      const isValid =
-        formElements.filter((elem) => elem.name === "bot-field")[0].value === "";
-
-      const validFormElements = isValid ? formElements : [];
-
-      if (validFormElements.length < 1) {
-        // or some other cheeky error message
-        setSubmitText("It looks like you filled out too many fields!");
-      } else {
-        const filledOutElements = validFormElements
-          .filter((elem) => !!elem.value)
-          .map(
-            (element) =>
-              encodeURIComponent(element.name) +
-              "=" +
-              encodeURIComponent(element.value)
-          )
-          .join("&");
-
-        await fetch("/", {
-          method: "POST",
-          headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: filledOutElements,
-        })
-          .then(() => {
-            setSubmitText("Thanks for your feedback, your message has been sent successfully!");
+      const filledOutElements = formElements
+        .filter((elem) => !!elem.value)
+        .map(
+          (element) =>
+            encodeURIComponent(element.name) +
+            "=" +
+            encodeURIComponent(element.value)
+        )
+        .join("&");
+      await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: filledOutElements,
+      })
+        .then(() => {
+          setInputData({
+            contactName: "",
+            contactEmail: "",
+            contactSubject: "",
+            contactMessage: ""
           })
-          .catch((_) => {
-            setSubmitText(
-              "There was an error with your submission, please email me using the address above."
-            );
-          });
-      }
+          setSubmitText("Thanks for your feedback, your message has been sent successfully!");
+          setSubmitText(null);
+        })
+        .catch((_) => {
+          setSubmitText(
+            "There was an error with your submission, please email me using the address above."
+          );
+          setSubmitText(null);
+        });
+      
     };
 
-    const [submitText, setSubmitText] = useState(null);
-
-
+    
 
     return (
       <section id="contact">
@@ -72,29 +83,23 @@ function Contact ({data}) {
         <div className="row">
           <div className="eight columns">
 
-            <form className="email-form" method="POST" id="feedForm" name="feedForm" data-netlify="true" onSubmit={e => onSubmit(e, setSubmitText)}>
+            <form className="email-form" method="POST" id="feedForm" name="feedForm" data-netlify="true" onSubmit={handleSubmit}>
               <input type="hidden" name="form-name" value="feedForm" />
-              <p style={{ display: "none" }}>
-                <label>
-                  Don’t fill this out if you expect to hear from us!
-                  <input name="bot-field" value="" readOnly />
-                </label>
-              </p>
               <div>
                 <label htmlFor="contactName">Name <span className="required">*</span></label>
-                <input type="text" placeholder="Enter Name" required size="35" id="contactName" name="contactName" />
+                <input type="text" placeholder="Enter Name" required size="35" id="contactName" value={inputData.contactName} name="contactName" onChange={handleChange} />
               </div>
               <div>
                 <label htmlFor="contactEmail">Email <span className="required">*</span></label>
-                <input type="email" placeholder="Enter Email" required size="35" id="contactEmail" name="contactEmail" />
+                <input type="email" placeholder="Enter Email" required size="35" id="contactEmail" value={inputData.contactEmail} name="contactEmail" onChange={handleChange} />
               </div>
               <div>
                 <label htmlFor="contactSubject">Subject <span className="required">*</span></label>
-                <input type="text" placeholder="Enter Subject" required size="35" id="contactSubject" name="contactSubject" />
+                <input type="text" placeholder="Enter Subject" required size="35" id="contactSubject" value={inputData.contactSubject} name="contactSubject" onChange={handleChange} />
               </div>
               <div>
                 <label htmlFor="contactMessage">Message <span className="required">*</span></label>
-                <textarea cols="50" rows="15" placeholder="Enter Message" id="contactMessage" required name="contactMessage"></textarea>
+                <textarea cols="50" rows="15" placeholder="Enter Message" id="contactMessage" required value={inputData.contactMessage} name="contactMessage" onChange={handleChange} ></textarea>
               </div>
               <div>
                 <button type="submit" className="submit">Submit</button>     
