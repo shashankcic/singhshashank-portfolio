@@ -1,5 +1,6 @@
 import React from 'react';
 import '../App.css'
+import SmoothScroll from './Scroll';
 
 function Header ({data}){
   if(data){
@@ -18,12 +19,12 @@ function Header ({data}){
         <a className="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
         <a className="mobile-btn" href="#home" title="Hide navigation">Hide navigation</a>
         <ul id="nav" className="nav">
-          <li className="current"><a className="smoothscroll" href="#home">Home</a></li>
-          <li><a className="smoothscroll" href="#about">About</a></li>
-          <li><a className="smoothscroll" href="#resume">Resume</a></li>
-          <li><a className="smoothscroll" href="#portfolio">Works</a></li>
-          <li><a className="smoothscroll" href="#interests">Interests</a></li>
-          <li><a className="smoothscroll" href="#contact">Contact</a></li>
+          <li className="current"><a onClick={SmoothScroll} href="#home">Home</a></li>
+          <li><a  onClick={SmoothScroll} href="#about">About</a></li>
+          <li><a  onClick={SmoothScroll} href="#resume">Resume</a></li>
+          <li><a  onClick={SmoothScroll} href="#portfolio">Works</a></li>
+          <li><a  onClick={SmoothScroll} href="#interests">Interests</a></li>
+          <li><a  onClick={SmoothScroll} href="#contact">Contact</a></li>
         </ul>
       </nav>
       <div className="row banner">
@@ -37,7 +38,7 @@ function Header ({data}){
         </div>
       </div>
       <p className="scrolldown">
-        <a className="smoothscroll" href="#about"><i className="icon-down-circle"></i></a>
+        <a  onClick={SmoothScroll} href="#about"><i className="icon-down-circle"></i></a>
       </p>
     </header>
   );

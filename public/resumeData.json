@@ -1,10 +1,10 @@
 {
   "main": {
     "name":"Shashank Singh",
-    "occupation":"Student Developer",
+    "occupation":"Software Developer",
     "description":"Programming and Commerce Enthusiast, Content and Graphic Designer",
     "image":"profilepic.jpg",
-    "bio":"A hardworking, highly motivated and ambitious final year engineering student from University of Delhi in the field of Information Technology, with a keen interest in programming, mathematics, commerce and designing. Likes to explore new fields & new interests, easily adaptable to new environments, and also makes friends easily. Has good problem solving ability and analytical skills. Has a liking for open source and is looking for an opportunity to work with these great minds.",
+    "bio":"A hardworking, highly motivated and ambitious Software Developer at Sopra Banking Software, graduated from University of Delhi in the field of Information Technology, with a keen interest in programming, mathematics, commerce and designing. Likes to explore new fields & new interests, easily adaptable to new environments, and also makes friends easily. Has good problem solving ability and analytical skills. Has a liking for open source and is looking for an opportunity to work with these great minds.",
     "contactmessage":"For any Query/Issue, feel free to contact me.",
     "email": "singhshashankcic@ducic.ac.in",
     "phone": "+91-7985918248",
@@ -14,8 +14,8 @@
       "state":"Delhi",
       "zip": "110007"
     },
-    "website": "https://www.singhshashank.co",
-    "resumedownload":"https://www.singhshashank.co",
+    "website": "https://www.singhshashank.com",
+    "resumedownload":"https://www.singhshashank.com",
     "social":[
       {
         "name":"twitter",
@@ -45,7 +45,7 @@
       {
         "school":"Cluster Innovation Centre, University of Delhi",
         "degree":"Bachelors (Information Technology & Mathematical Innovation)",
-        "graduated":"Presently studying",
+        "graduated":"2021",
         "description":""
       },
       {
@@ -62,6 +62,12 @@
       }
     ],
     "work":[
+      {
+        "company":"Sopra Banking Software",
+        "title":"Full Stack Developer, Software Development Engineer",
+        "years":"Aug 2021 - Present",
+        "description":""
+      },
       {
         "company":"Defence Research & Development Organisation",
         "title":"Software Designer, Research Intern",
@@ -91,6 +97,18 @@
         "level":"95%"
       },
       {
+        "name":"TypeScript",
+        "level":"95%"
+      },
+      {
+        "name":"Angular",
+        "level":"90%"
+      },
+      {
+        "name":"Java",
+        "level":"90%"
+      },
+      {
         "name":"C++",
         "level":"90%"
       },
@@ -114,7 +132,7 @@
         "title":"Multi-Modal Emotion Recognition",
         "category":"A model for emotion recognition using Python.",
         "image":"emotion-rec.jpg",
-        "url":"https://www.singhshashank.co"
+        "url":"https://www.singhshashank.com"
       },
       {
         "title":"Market Basket Analysis",
@@ -132,7 +150,7 @@
         "title":"Image Recognition App",
         "category":"A face recognition app built with ReactJs",
         "image":"image-rec.png",
-        "url":"https://image-rec-brain.herokuapp.com/"
+        "url":"https://www.singhshashank.com/"
       }
     ]
   },
