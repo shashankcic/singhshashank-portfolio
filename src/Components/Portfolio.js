@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import '../App.css';
 
 function Portfolio ({data}) {
@@ -22,28 +22,6 @@ function Portfolio ({data}) {
     })
   }
 
-  useEffect(() => {
-    window.MediumWidget.Init({
-      renderTo: '#medium-widget', 
-      params: {
-        "resource":"https://medium.com/@singhshashank",
-        "postsPerLine":1,
-        "limit":4,
-        "picture":"small",
-        "fields":[
-          "description",
-          "author",
-          "claps",
-          "publishAt"
-        ],
-        "ratio":"landscape"
-      }
-    });
-    return () => {
-      window.MediumWidget.unmount();
-    };
-  }, [])
-
   return (
     <section id="portfolio">
       <div className="row">
@@ -53,7 +31,6 @@ function Portfolio ({data}) {
               {projects}
           </div>
         </div>
-        <div id="medium-widget"></div>
       </div>
 
     </section>
