@@ -1,4 +1,5 @@
 import React from 'react';
+import SmoothScroll from './Scroll';
 
 function Footer({data}) {
   if(data){
@@ -21,7 +22,7 @@ function Footer({data}) {
            </ul>
 
         </div>
-        <div id="go-top"><a className="smoothscroll" title="Back to Top" href="#home"><i className="icon-up-open"></i></a></div>
+        <div id="go-top"><a onClick={SmoothScroll} title="Back to Top" href="#home"><i className="icon-up-open"></i></a></div>
      </div>
   </footer>
     );
